@@ -1,0 +1,17 @@
+{
+  "name": "TezAnywhere Demo",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "postCreateCommand": "npm install && npm install -g nodemon",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "TezAnywhere Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
+}
