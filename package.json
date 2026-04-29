@@ -1,0 +1,23 @@
+@"
+{
+  "name": "tezanywhere",
+  "version": "0.1.0",
+  "description": "Cross‑chain payment receipts from Tezos to Base without bridges",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "verify": "node src/verifyPayment.js",
+    "update": "node src/updateLedger.js"
+  },
+  "dependencies": {
+    "@taquito/taquito": "^17.0.0",
+    "@taquito/http-utils": "^17.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ethers": "^6.8.0"
+  },
+  "keywords": ["tezos", "base", "cross-chain", "payment", "bridge-free"],
+  "author": "Cdo1985",
+  "license": "MIT"
+}
+"@ | Out-File -FilePath package.json -Encoding utf8
