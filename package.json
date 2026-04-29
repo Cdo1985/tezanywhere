@@ -1,13 +1,15 @@
-@"
 {
   "name": "tezanywhere",
   "version": "0.1.0",
-  "description": "Cross‑chain payment receipts from Tezos to Base without bridges",
+  "description": "Cross-chain payment receipts from Tezos to Base without bridges",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "verify": "node src/verifyPayment.js",
-    "update": "node src/updateLedger.js"
+    "update": "node src/updateLedger.js",
+    "test": "jest --detectOpenHandles",
+    "test:integration": "jest --testPathPattern=integration --runInBand",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@taquito/taquito": "^17.0.0",
@@ -16,8 +18,11 @@
     "express": "^4.18.2",
     "ethers": "^6.8.0"
   },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
   "keywords": ["tezos", "base", "cross-chain", "payment", "bridge-free"],
   "author": "Cdo1985",
   "license": "MIT"
 }
-"@ | Out-File -FilePath package.json -Encoding utf8
